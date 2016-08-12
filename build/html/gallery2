@@ -1,0 +1,16 @@
+<!-- GALLERY 2 -->
+		<div class="gallery-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<a class="fancybox" rel="gallery_group" href="http://test.webgeeks.by/templater/base/img/gallery-img.gif"><img src="http://test.webgeeks.by/templater/base/img/gallery-img.gif" alt=""/></a>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<a class="fancybox" rel="gallery_group" href="http://test.webgeeks.by/templater/base/img/gallery-img.gif"><img src="http://test.webgeeks.by/templater/base/img/gallery-img.gif" alt=""/></a>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<a class="fancybox" rel="gallery_group" href="http://test.webgeeks.by/templater/base/img/gallery-img.gif"><img src="http://test.webgeeks.by/templater/base/img/gallery-img.gif" alt=""/></a>
+					</div>
+				</div>
+			</div>
+		</div>

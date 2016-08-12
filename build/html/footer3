@@ -1,0 +1,31 @@
+<!-- FOOTER 3 -->
+		<div class="footer-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h2>Praesent nisl diam</h2>
+						<p>Proin eu leo non metus vulputate viverra. Curabitur ac augue ante. Praesent nisl diam, iaculis eget ipsum at, blandit laoreet eros. Nam hendrerit, erat commodo varius consequat, dolor massa tempor massa, vel cursus enim neque pellentesque augue. Aenean ullamcorper et lacus at hendrerit. Phasellus id lectus luctus, congue quam id, tempor justo</p>
+					</div>
+					<div class="col-md-4">
+						<h2>Praesent nisl diam</h2>
+						<p>Proin eu leo non metus vulputate viverra. Curabitur ac augue ante. Praesent nisl diam, iaculis eget ipsum at, blandit laoreet eros. Nam hendrerit, erat commodo varius consequat, dolor massa tempor massa, vel cursus enim neque pellentesque augue. Aenean ullamcorper et lacus at hendrerit. Phasellus id lectus luctus, congue quam id, tempor justo.</p>
+					</div>
+					<div class="col-md-4">
+						<h2>Praesent nisl diam</h2>
+						<p>Proin eu leo non metus vulputate viverra. Curabitur ac augue ante. Praesent nisl diam, iaculis eget ipsum at, blandit laoreet eros. Nam hendrerit, erat commodo varius consequat, dolor massa tempor massa, vel cursus enim neque pellentesque augue. Aenean ullamcorper et lacus at hendrerit. Phasellus id lectus luctus, congue quam id, tempor justo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12 left">
+						&copy; 2014 Praesent nisl diam.
+					</div>
+					<div class="col-md-6 col-sm-6 right hidephone">
+						Proin | Metus | Vulputate | Curabitur
+					</div>
+				</div>
+			</div>
+		</div>

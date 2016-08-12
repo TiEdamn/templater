@@ -1,0 +1,13 @@
+<!-- SLIDER 2 -->
+		<div id="slider" class="slider-col">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="camera_slider">
+							<div data-src="http://placehold.it/1110x400/21b2eb/058dcd"></div>
+							<div data-src="http://placehold.it/1110x400/058dcd/21b2eb"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

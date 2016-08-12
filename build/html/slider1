@@ -1,0 +1,7 @@
+<!-- SLIDER 1 -->
+        <div id="slider">
+			<div class="camera_slider">
+				<div data-src="http://placehold.it/1920x400/21b2eb/058dcd"></div>
+				<div data-src="http://placehold.it/1920x400/058dcd/21b2eb"></div>
+			</div>
+		</div>

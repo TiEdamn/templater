@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Draggable + Sortable</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <style>
+  ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; float: left; margin-left: 50px;}
+  li { margin: 5px; padding: 5px; width: 150px; cursor: pointer; }
+  #sortable{
+    background: #ff0000;
+    min-height: 50px;
+    width: 170px;
+  }
+  </style>
+  <script>
+  $(function() {
+    $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( ".draggable" ).draggable({
+      connectToSortable: "#sortable",
+      helper: "clone",
+      revert: "invalid",
+      cursor: "move"
+    });
+    $( "ul, li" ).disableSelection();
+  });
+  
+  $( "#sortable" ).change(function() {
+        $( "#sortable li" ).each(function(){
+            code+= $(this).attr("data")+"\r\n";
+        });
+    });
+    
+  </script>
+</head>
+<body>
+ 
+<ul>
+  <li class="draggable ui-state-highlight test1" data="header1">Drag me first</li>
+  <li class="draggable ui-state-highlight test2" data="header2">Drag me second</li>
+  <li class="draggable ui-state-highlight test3" data="header3">Drag me third</li>
+</ul>
+ 
+<ul id="sortable">
+</ul>
+
+<button>Test</button>
+<div id="result"></div>
+
+<script>
+    $( "button" ).click(function() {
+        var items = [];
+        var currtime = $.now();
+        $( "#sortable li" ).each(function(){
+            items.push($(this).attr("data"));
+        });
+        
+        $.ajax({
+                type: "POST",
+                url: "index.php",
+                data: "code="+items+"&timest="+currtime
+        });
+
+        
+        <?php 
+        if( isset($_POST["code"]) )
+        {
+            $block_string = $_POST ["code"];
+            $block_array = explode(",", $block_string);
+            
+            $content = "";
+            $css = "";
+            $folder = $_POST ["timest"];
+            
+            mkdir("projects/".$folder, 0777);
+            mkdir('projects/'.$folder.'/css', 0777);
+            
+            foreach ($block_array as $value) {
+                $content .= file_get_contents('build/html/'.$value)."\n";
+            }
+            
+            $unique = array_unique($block_array);
+            
+            foreach ($unique as $value) {
+                $css .= file_get_contents('build/css/'.$value)."\n";
+            }
+            
+            file_put_contents('projects/'.$folder.'/css/webgeeks.css',$css);
+            
+            $html .= file_get_contents('build/include/header')."\n";
+            $html .= $content;
+            $html .= file_get_contents('build/include/footer')."\n";
+            
+            file_put_contents('projects/'.$folder.'/index.html',$html);
+            
+        }
+        
+        ?>
+        $('#result').html('<a target="_blank" href="projects/'+currtime+'/index.html">Ваш проект</a>');
+    });
+</script>
+ 
+</body>
+</html>

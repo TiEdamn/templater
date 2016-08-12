@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebGeeks</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link href="base/css/bootstrap-3.1.1.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="base/js/bootstrap-3.1.1.min.js"></script>
+  <style>
+  ul { list-style-type: none; margin: 0; padding: 0;}
+  li { cursor: pointer; }
+  .tab-content{
+    border: 1px solid #ddd;
+  }
+  .tab-content li, #sortable li { cursor: pointer; }
+  .tab-content li{
+    width:47%;
+    display: inline-block;
+    margin:5px; padding:5px; 
+  }
+  #sortable{
+    margin-top: 40px;
+    min-height: 250px;
+    width: 100%;
+    padding-top: 1px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+  }
+  .wg-templater ul li img{
+    width: 100%;
+  }
+  </style>
+  <script>
+  $(function() {
+    $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( ".draggable" ).draggable({
+      connectToSortable: "#sortable",
+      helper: "clone",
+      revert: "invalid",
+      cursor: "move"
+    });
+    $( "ul, li" ).disableSelection();
+  });
+  
+  $( "#sortable" ).change(function() {
+        $( "#sortable li" ).each(function(){
+            code+= $(this).attr("data")+"\r\n";
+        });
+    });
+    
+  </script>
+</head>
+<body>
+    <div class="container wg-templater">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="active"><a href="#site-header" role="tab" data-toggle="tab">Шапка</a></li>
+                  <li><a href="#site-slider" role="tab" data-toggle="tab">Слайдер</a></li>
+                  <li><a href="#site-content" role="tab" data-toggle="tab">Контент</a></li>
+                  <li><a href="#site-service" role="tab" data-toggle="tab">Услуги</a></li>
+                  <li><a href="#site-gallery" role="tab" data-toggle="tab">Галереи</a></li>
+                  <li><a href="#site-form" role="tab" data-toggle="tab">Формы</a></li>
+                  <li><a href="#site-footer" role="tab" data-toggle="tab">Подвал</a></li>
+                  <li><a href="#site-other" role="tab" data-toggle="tab">Другое</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="site-header">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="header1"><img src="example/header1.jpg" alt="header1"/></li>
+                      <li class="draggable ui-state-highlight" data="header2"><img src="example/header2.jpg" alt="header2"/></li>
+                      <li class="draggable ui-state-highlight" data="header3"><img src="example/header3.jpg" alt="header3"/></li>
+                      <li class="draggable ui-state-highlight" data="header4"><img src="example/header4.jpg" alt="header4"/></li>
+                      <li class="draggable ui-state-highlight" data="header5"><img src="example/header5.jpg" alt="header5"/></li>
+                      <li class="draggable ui-state-highlight" data="header6"><img src="example/header6.jpg" alt="header6"/></li>
+                      <li class="draggable ui-state-highlight" data="header7"><img src="example/header7.jpg" alt="header7"/></li>
+                      <li class="draggable ui-state-highlight" data="header8"><img src="example/header8.jpg" alt="header8"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-slider">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="slider1"><img src="example/slider1.jpg" alt="slider1"/></li>
+                      <li class="draggable ui-state-highlight" data="slider2"><img src="example/slider2.jpg" alt="slider2"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-content">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="content1"><img src="example/content1.jpg" alt="content1"/></li>
+                      <li class="draggable ui-state-highlight" data="content2"><img src="example/content2.jpg" alt="content2"/></li>
+                      <li class="draggable ui-state-highlight" data="content3"><img src="example/content3.jpg" alt="content3"/></li>
+                      <li class="draggable ui-state-highlight" data="content4"><img src="example/content4.jpg" alt="content4"/></li>
+                      <li class="draggable ui-state-highlight" data="content5"><img src="example/content5.jpg" alt="content5"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-service">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="product1"><img src="example/service1.jpg" alt="product1"/></li>
+                      <li class="draggable ui-state-highlight" data="product2"><img src="example/service2.jpg" alt="product2"/></li>
+                      <li class="draggable ui-state-highlight" data="product3"><img src="example/service3.jpg" alt="product3"/></li>
+                      <li class="draggable ui-state-highlight" data="product4"><img src="example/service4.jpg" alt="product4"/></li>
+                      <li class="draggable ui-state-highlight" data="product5"><img src="example/service5.jpg" alt="product5"/></li>
+                      <li class="draggable ui-state-highlight" data="product6"><img src="example/service6.jpg" alt="product6"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-gallery">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="gallery1"><img src="example/gallery1.jpg" alt="gallery1"/></li>
+                      <li class="draggable ui-state-highlight" data="gallery2"><img src="example/gallery2.jpg" alt="gallery2"/></li>
+                      <li class="draggable ui-state-highlight" data="gallery3"><img src="example/gallery3.jpg" alt="gallery3"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-form">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="form1"><img src="example/form1.jpg" alt="form1"/></li>
+                      <li class="draggable ui-state-highlight" data="form2"><img src="example/form2.jpg" alt="form2"/></li>
+                      <li class="draggable ui-state-highlight" data="form3"><img src="example/form3.jpg" alt="form3"/></li>
+                      <li class="draggable ui-state-highlight" data="form4"><img src="example/form4.jpg" alt="form4"/></li>
+                      <li class="draggable ui-state-highlight" data="form5"><img src="example/form5.jpg" alt="form5"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-footer">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="footer1"><img src="example/footer1.jpg" alt="header1"/></li>
+                      <li class="draggable ui-state-highlight" data="footer2"><img src="example/footer2.jpg" alt="footer2"/></li>
+                      <li class="draggable ui-state-highlight" data="footer3"><img src="example/footer3.jpg" alt="footer3"/></li>
+                      <li class="draggable ui-state-highlight" data="footer4"><img src="example/footer4.jpg" alt="footer4"/></li>
+                      <li class="draggable ui-state-highlight" data="footer5"><img src="example/footer5.jpg" alt="footer5"/></li>
+                      <li class="draggable ui-state-highlight" data="footer6"><img src="example/footer6.jpg" alt="footer6"/></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="site-other">
+                    <ul>
+                      <li class="draggable ui-state-highlight" data="other1"><img src="example/other1.jpg" alt="other1"/></li>
+                      <li class="draggable ui-state-highlight" data="other2"><img src="example/other2.jpg" alt="other2"/></li>
+                      <li class="draggable ui-state-highlight" data="other3"><img src="example/other3.jpg" alt="other3"/></li>
+                      <li class="draggable ui-state-highlight" data="other4"><img src="example/other4.jpg" alt="other4"/></li>
+                    </ul>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <ul id="sortable">
+                </ul>
+                
+                <button>Создать</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    $( "button" ).click(function() {
+        var items = [];
+        var currtime = $.now();
+        $( "#sortable li" ).each(function(){
+            items.push($(this).attr("data"));
+        });
+        
+        $.ajax({
+                type: "POST",
+                url: "create.php",
+                data: "code="+items+"&timest="+currtime,
+                success: function(data){
+                    if(data != 0){
+                        $('#result').html('<a target="_blank" href="projects/'+currtime+'/index.html">Ваш проект</a>');
+                    }else{
+                        alert("Выберите хотя бы 1 блок");
+                    }
+                }
+        });
+
+    });
+</script>
+ 
+</body>
+</html>

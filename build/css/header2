@@ -1,0 +1,6 @@
+.header2{
+    width: 100%; 
+    height: 30px; 
+    background: green; 
+    float: left;
+}

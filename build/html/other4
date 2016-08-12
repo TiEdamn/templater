@@ -1,0 +1,47 @@
+<!-- OTHER 4 -->
+            <div class="container timer-block">
+                <script type="text/javascript">year = 2014; month = 11; day = 30; hour= 23; minute= 45; sec= 0;</script>
+                <script type="text/javascript" src="http://test.webgeeks.by/templater/base/js/countdown.js"></script>
+                <!--START TIMER-->
+                <div id="countbox">
+                    <div class="countbox-num">
+                        <div id="countbox-days1">
+                            <span></span>1
+                        </div>
+                        <div id="countbox-days2">
+                            <span></span>7
+                        </div>
+                        <div id="countbox-days-text"></div>
+                    </div>
+                    <div class="countbox-space"></div>
+                    <div class="countbox-num">
+                        <div id="countbox-hours1">
+                            <span></span>1
+                        </div>
+                        <div id="countbox-hours2">
+                            <span></span>8
+                        </div>
+                        <div id="countbox-hours-text"></div>
+                    </div>
+                    <div class="countbox-space"></div>
+                    <div class="countbox-num">
+                        <div id="countbox-mins1">
+                            <span></span>1
+                        </div>
+                        <div id="countbox-mins2">
+                            <span></span>7
+                        </div>
+                        <div id="countbox-mins-text"></div>
+                    </div>
+                    <div class="countbox-space"></div>
+                    <div class="countbox-num">
+                        <div id="countbox-secs1">
+                            <span></span>2
+                        </div>
+                        <div id="countbox-secs2">
+                            <span></span>6
+                        </div>
+                        <div id="countbox-secs-text"></div>
+                    </div>
+                </div>
+            </div>
